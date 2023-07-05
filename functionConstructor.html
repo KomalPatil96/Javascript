@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script type="text/javascript">
+           var fun = new Function("x", "y", "return x*y;");
+           function  myfun()
+           {
+            var result;
+            result = fun(10 , 20);
+            document.write(result);
+           }
+        </script>
+    </head>
+    <body>
+        <form>
+           <input type="button" onclick="myfun()" value="click me">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function Sub()
+            {
+                var num1, num2, Sub;
+                num1 =  parseInt(document.getElementById("text1").value);
+                num2 =  parseInt(document.getElementById("text2").value);
+                Sub = num1 - num2;
+                document.getElementById("text3").value = Sub;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <label>First no.</label>
+            <input id="text1">
+            <br><br>
+            <label>Second no.</label>
+            <input id="text2">
+            <br><br>
+            <input type="button" onclick="Sub()" value="Substraction"/>
+            <label>Substraction</label>
+            <input id="text3">
+        </form>
+    </body>
+</html>

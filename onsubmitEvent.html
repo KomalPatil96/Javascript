@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script type="text/javascript">
+             function validate()
+             {
+                if(document.myForm.nm.value == "")
+                {
+                    alert("Please provide your name!");
+                    document.myForm.nm.focus();
+                    return false;
+                }
+                if(document.myForm.mob.value == "" || isNaN(document.myForm.mob.value) || 
+                document.myForm.mob.value.length != 10)
+                {
+                    alret("please provide a mobile number in the format 7776838221.");
+                    document.myForm.mob.focus();
+                    return false;
+                }
+             }
+        </script>
+    </head>
+    <body>
+        <form name="myForm" action="signup.php" method="post" onsubmit="return (validate());">
+            <table>
+                <tr>
+                    <th colspan="2"><h3>Resistration Form</h3></th>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="nm" ></td>
+                </tr>
+                <tr>
+                    <td>Mobile no.</td>
+                    <td><input type="text" name="mob"> </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Save">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

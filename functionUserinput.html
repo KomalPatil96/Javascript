@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function Add()
+            {
+                var num1, num2, sum;
+                num1 = parseInt(document.getElementById("text1").value);
+                num2 = parseInt(document.getElementById("text2").value);
+                sum = num1 + num2;
+                document.getElementById("sum").value = sum;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+        <label>Enter First No.</label>
+        <input id="text1">  
+        <br><br>
+        <label>Enter Second No.</label>
+        <input id="text2">
+        <br><br>
+        <input type="button" onclick="Add()" value="ADD"/>
+        <label>Sum</label>
+        <input id="sum">
+    </form>
+    </body>
+</html>

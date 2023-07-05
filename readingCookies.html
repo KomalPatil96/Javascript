@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script type="text/javascript">
+               function writeCookie()
+             {
+                 if(document.myForm.customer.value == "")
+                 {
+                    alert("Please Enter Name First");
+                    return;
+                 }
+                 cookievalue = escape(document.myForm.customer.value) + ";";
+                 document.cookie = "name=" + cookievalue;
+                 document.cookie = "nick=" + cookievalue;
+                 /*document.write ("Setting Cookies:" + "name=" + cookievalue);*/
+                
+             }
+             function readCookie()
+             {
+                var allcookies = unescape(document.cookie);
+                document.write("All Cookies :" + allcookies + "<br><br>");
+
+                cookiearray = allcookies.split(';');
+
+                for(var i = 0; i<cookiearray.length; i++)
+                {
+                    name = cookiearray[i].split('=')[0];
+                    value = cookiearray[i].split('=')[1];
+                    document.write("Key is : " + name + " and Value is : " + value + "<br/>");
+                }
+             }
+        </script>
+    </head>
+    <body>
+       <form name="myForm" action="">
+        <label>Enter name:</label>
+        <input type="text" name="customer"/>
+        <input type="button" value="Set Cookies" onclick="writeCookie();"/>
+        <br>  <br>  <br>
+        <input type="button" value="Get Cookies" onclick="readCookie()"/>
+       </form>
+    </body>
+</html>
