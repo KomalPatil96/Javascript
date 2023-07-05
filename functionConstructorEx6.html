@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript">
+            var multi = new Function("a","b", "return a*b");
+            function myfun(){
+                var result;
+                result = multi(20,20);
+                document.write(result);
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="myfun()" value="click me"/>
+    </body>
+</html>

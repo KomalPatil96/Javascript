@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function changeColor(color)
+            {
+                 alert("Your color is " + color);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>HTML Events</h1>
+        <select onchange="changeColor(this.value)">
+            <option value="red">Red</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Purple">Purple</option>
+        </select>
+    </body>
+</html>
